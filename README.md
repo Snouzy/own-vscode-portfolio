@@ -16,7 +16,6 @@ A Visual Studio Code themed developer portfolio website built with Next.js and d
   - [x] Nord
 - [ ] Interactive custom terminal
 - [x] Translations
-- [ ] Add translations
 
 For other features and themes suggestions, please open an issue.
 
