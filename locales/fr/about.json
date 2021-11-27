@@ -1,3 +1,12 @@
 {
-  "title": "À propos de moi"
+  "title": "À propos de moi",
+  "age": "Age",
+  "age-description": "24",
+  "experiences": "Expériences",
+  "experiences-description": "- Armée (guerre électronique) 3ans <0/> -  Freelance (développeur web - intégrateur) depuis 2ans  <0/> - CDI (développeur front-end - applications web) depuis 1an et demi <1>@Vazee</1>",
+  "languages": "Languages",
+  "languages-description": "HTML, CSS, JavaScript, ReactJS, Typescript, NodeJS",
+  "frameworks": "Frameworks / libs",
+  "frameworks-description": "NextJS, Redux, RTK, Mui, React Query",
+  "hobbies": "Passions"
 }

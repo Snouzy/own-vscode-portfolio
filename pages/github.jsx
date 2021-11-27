@@ -17,36 +17,39 @@ const GithubPage = ({ entities }) => {
     level4: '#39d353',
   };
 
-  const reposLength = Number(process.env.NEXT_PUBLIC_GITHUB_REPOS_LENGTH);
   const { t } = useTranslation('github');
 
   return (
     <>
-      {entities.map(({ user, repos }) => (
-        <React.Fragment key={user.id}>
-          <div className={styles.user}>
-            <div>
-              <Image src={user.avatar_url} className={styles.avatar} alt={user.login} width={50} height={50} />
-              <h3 className={styles.username}>{user.login}</h3>
+      {entities.length ? (
+        entities.map(({ user, repos }) => (
+          <React.Fragment key={user.id}>
+            <div className={styles.user}>
+              <div>
+                <Image src={user.avatar_url} className={styles.avatar} alt={user.login} width={50} height={50} />
+                <h3 className={styles.username}>{user.login}</h3>
+              </div>
+              <div>
+                <h3>{user.public_repos} repos</h3>
+              </div>
+              <div>
+                <h3>{user.followers} followers</h3>
+              </div>
             </div>
-            <div>
-              <h3>{user.public_repos} repos</h3>
+            <h2>{t('latest-repos', { count: repos.length })}</h2>
+            <div className={styles.container}>
+              {repos.map((repo) => (
+                <RepoCard key={repo.id} repo={repo} />
+              ))}
             </div>
-            <div>
-              <h3>{user.followers} followers</h3>
+            <div className={styles.contributions}>
+              <GitHubCalendar username={user.login} theme={theme} hideColorLegend />
             </div>
-          </div>
-          <h2>{t('latest-repos', { count: repos.length })}</h2>
-          <div className={styles.container}>
-            {repos.map((repo) => (
-              <RepoCard key={repo.id} repo={repo} />
-            ))}
-          </div>
-          <div className={styles.contributions}>
-            <GitHubCalendar username={user.login} theme={theme} hideColorLegend />
-          </div>
-        </React.Fragment>
-      ))}
+          </React.Fragment>
+        ))
+      ) : (
+        <h3>{t('common:problem')}</h3>
+      )}
     </>
   );
 };

@@ -15,11 +15,10 @@ function MyApp({ Component, pageProps }) {
       document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
     }
   }, []);
-  console.log('lang:', lang);
 
   return (
     <Layout>
-      <Head title={`Nitin Ranganath | ${pageProps.title}`} />
+      <Head title={`Mathias Bradiceanu | ${pageProps.title}`} />
       <I18nProvider lang={lang}>
         <Component {...pageProps} />
       </I18nProvider>

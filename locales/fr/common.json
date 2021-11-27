@@ -10,5 +10,6 @@
   "run": "Déboguer",
   "terminal": "Terminal",
   "window": "Fenêtre",
-  "help": "Aide"
+  "help": "Aide",
+  "problem": "Un problème est survenu :(. Essayez plus tard !"
 }

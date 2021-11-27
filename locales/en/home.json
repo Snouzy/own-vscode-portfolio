@@ -1,4 +1,8 @@
 {
   "view_work": "View work",
-  "contact_me": "Contact me"
+  "contact_me": "Contact me",
+  "title": "I build <0/> apps",
+  "title_prefix": "I BUILD",
+  "title_suffix": "APPS.",
+  "role": "Front-end React.JS / Typescript developer"
 }
