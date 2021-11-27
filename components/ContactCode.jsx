@@ -8,98 +8,61 @@ const ContactCode = () => {
       </p>
       <p className={styles.line}>
         &nbsp;&nbsp;&nbsp;website:{' '}
-        <a href="https://nitinranganath.me" target="_blank" rel="noopener">
-          nitinranganath.me
+        <a href="/" target="_blank" rel="noopener">
+          snouzyyyyyyyyyy
         </a>
         ;
       </p>
       <p className={styles.line}>
         &nbsp;&nbsp;&nbsp;email:{' '}
-        <a
-          href="mailto:nitinranganath@gmail.com"
-          target="_blank"
-          rel="noopener"
-        >
-          nitinranganath@gmail.com
+        <a href="mailto:contact@snouzy.com" target="_blank" rel="noopener">
+          contact@snouzy.com
         </a>
         ;
       </p>
       <p className={styles.line}>
-        &nbsp;&nbsp;&nbsp;github:{' '}
+        &nbsp;&nbsp;&nbsp;github(pro):{' '}
         <a href="https://github.com/itsnitinr" target="_blank" rel="noopener">
-          itsnitinr
+          mathias-bradi
+        </a>
+        ;
+      </p>
+      <p className={styles.line}>
+        &nbsp;&nbsp;&nbsp;github(perso):{' '}
+        <a href="https://github.com/Snouzy" target="_blank" rel="noopener">
+          Snouzy
         </a>
         ;
       </p>
       <p className={styles.line}>
         &nbsp;&nbsp;&nbsp;linkedin:{' '}
-        <a
-          href="https://www.linkedin.com/in/nitinranganath/"
-          target="_blank"
-          rel="noopener"
-        >
-          nitinranganath
+        <a href="https://www.linkedin.com/in/mathias-bradiceanu-3410b1ab/" target="_blank" rel="noopener">
+          MathiasBradiceanu
         </a>
         ;
       </p>
       <p className={styles.line}>
         &nbsp;&nbsp;&nbsp;twitter:{' '}
-        <a
-          href="https://www.twitter.com/iamnitinr"
-          target="_blank"
-          rel="noopener"
-        >
-          iamnitinr
+        <a href="https://twitter.com/BradiceanuM" target="_blank" rel="noopener">
+          snz
         </a>
         ;
       </p>
       <p className={styles.line}>
         &nbsp;&nbsp;&nbsp;instagram:{' '}
-        <a
-          href="https://www.instagram.com/iamnitinr"
-          target="_blank"
-          rel="noopener"
-        >
-          iamnitinr
+        <a href="https://www.instagram.com/snz_mat/" target="_blank" rel="noopener">
+          snz_mat
         </a>
         ;
       </p>
       <p className={styles.line}>
-        &nbsp;&nbsp;&nbsp;polywork:{' '}
-        <a
-          href="https://www.polywork.com/nitinranganath"
-          target="_blank"
-          rel="noopener"
-        >
-          nitinranganath
+        &nbsp;&nbsp;&nbsp;facebook:{' '}
+        <a href="https://www.facebook.com/mathias.bradiceanu/" target="_blank" rel="noopener">
+          mathiasbradiceanu
         </a>
         ;
       </p>
-      <p className={styles.line}>
-        &nbsp;&nbsp;&nbsp;telegram:{' '}
-        <a href="https://t.me/iamnitinr" target="_blank" rel="noopener">
-          iamnitinr
-        </a>
-        ;
-      </p>
-      <p className={styles.line}>
-        &nbsp;&nbsp;codepen:{' '}
-        <a href="https://codepen.io/itsnitinr" target="_blank" rel="noopener">
-          nitinranganath
-        </a>
-        ;
-      </p>
-      <p className={styles.line}>
-        &nbsp;&nbsp;codesandbox:{' '}
-        <a
-          href="https://codesandbox.io/u/itsnitinr"
-          target="_blank"
-          rel="noopener"
-        >
-          itsnitinr
-        </a>
-        ;
-      </p>
+
       <p className={styles.line}>&#125;</p>
     </div>
   );

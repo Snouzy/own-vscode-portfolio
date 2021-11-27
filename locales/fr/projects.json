@@ -1,5 +1,25 @@
 {
   "title": "Ce que j'ai pu réaliser :",
   "source_code": "Source",
-  "live_demo": "Démonstration"
+  "live_demo": "Démonstration",
+  "trendex": {
+    "subtitle": "Startup dans le domaine du #Trading",
+    "description": "Développement d'une plateforme de trading (achat-vente-revente) de parts. <0/>Ajout de fonctionnalités, debug et améliorations de l'existant."
+  },
+  "fitdistance": {
+    "subtitle": "Plateforme SaaS de coaching à distance",
+    "description": "Développement d'une plateforme de coaching à distance dans le domaine du fitness. Le projet a démarrer en 2021 et est toujours en cours au jour d'aujourd'hui"
+  },
+  "douane": {
+    "subtitle": "Logiciel bureau pour la douane",
+    "description": "Cette application permet aux douaniers de contrôler de tous les écrans répartis sur les différentes portes des brigades afin d'informer le public plus simplement et plus précisément en centralisant le contrôle sur un seul écran (un tableau de bord) connecté aux différents moniteurs."
+  },
+  "vscodeportfolio": {
+    "subtitle": "Contribution open source",
+    "description": "Une contribution open source sur un portolio pour les développeurs basé sur le VSCode (que vous êtes entrain d'utiliser!!)"
+  },
+  "rpropre": {
+    "subtitle": "Site vitrine",
+    "description": "L’entreprise de nettoyage Rpropre, vous accompagne pour l’entretien et le nettoyage des bureaux, la remise en état de vos chantiers, le lavage de vos surfaces vitrées pour les professionnels et les particuliers de Mulhouse."
+  }
 }

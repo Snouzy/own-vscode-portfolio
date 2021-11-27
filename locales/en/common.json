@@ -10,5 +10,6 @@
   "run": "Run",
   "terminal": "Terminal",
   "window": "Window",
-  "help": "Help"
+  "help": "Help",
+  "problem": "An error occurred :(. Try again later !"
 }

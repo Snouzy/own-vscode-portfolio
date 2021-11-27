@@ -60,8 +60,7 @@
   margin-left: 0.4rem;
   width: 0.125em;
   background: var(--accent-color);
-  animation: typewriter 2.5s steps(24) 500ms forwards,
-    blink 750ms steps(24) infinite;
+  animation: typewriter 2.5s steps(24) 500ms forwards, blink 750ms steps(24) infinite;
 }
 
 @keyframes typewriter {
@@ -101,11 +100,6 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.illustration {
-  height: 500px;
-  width: 460px;
-}
-
 /* 4K Screens */
 @media screen and (min-width: 2000px) {
   .background {
@@ -132,7 +126,14 @@
     width: 700px;
   }
 }
-
+@media screen and (min-width: 1200px) {
+  .illustration {
+    height: 500px;
+    width: 460px;
+    position: absolute;
+    right: -2rem;
+  }
+}
 /* iPad Pro */
 @media screen and (max-width: 1100px) {
   .background {
@@ -150,15 +151,12 @@
     font-size: 4rem;
   }
   .bio {
+    width: auto;
     font-size: 1.75rem;
     margin: 0.75rem auto 3rem;
   }
   .illustration {
-    position: absolute;
-    bottom: -50px;
-    right: 0;
-    height: 700px;
-    width: 600px;
+    display: none;
   }
 }
 
@@ -199,7 +197,7 @@
     font-size: 2rem;
   }
   .bio {
-    font-size: 1.25rem;
+    font-size: 0.7rem;
     margin-bottom: 2rem;
   }
   .button {
@@ -208,12 +206,20 @@
   .outlined {
     font-size: 1rem;
   }
-  .illustration {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 75vw;
-    height: 50vh;
-    z-index: 1;
+}
+
+/** Very small phones */
+@media screen and (max-width: 400px) {
+  .buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .buttonsContainer > button:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+  .button {
+    margin-right: 0;
   }
 }

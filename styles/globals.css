@@ -9,10 +9,45 @@
 }
 
 /* Tags */
-.react {
+.wordpress {
+  border: 0.1rem solid rgb(29, 136, 184);
+}
+.wordpress:hover {
+  background: rgba(29, 136, 184, 0.25);
+}
+
+.html {
+  border: 0.1rem solid rgb(221, 75, 36);
+}
+.html:hover {
+  background: rgba(221, 75, 36, 0.25);
+}
+
+.css {
+  border: 0.1rem solid rgb(37, 74, 221);
+}
+.css:hover {
+  background: rgba(37, 74, 221, 0.25);
+}
+
+.javascript {
+  border: 0.1rem solid rgb(239, 216, 29);
+}
+.javascript:hover {
+  background: rgba(239, 216, 29, 0.25);
+}
+
+.php {
+  border: 0.1rem solid rgb(119, 123, 179);
+}
+.php:hover {
+  background: rgba(119, 123, 179, 0.25);
+}
+
+.reactjs {
   border: 0.1rem solid rgb(97, 218, 251);
 }
-.react:hover {
+.reactjs:hover {
   background: rgba(97, 218, 251, 0.25);
 }
 
@@ -23,6 +58,27 @@
   background: rgba(131, 205, 41, 0.25);
 }
 
+.express {
+  border: 0.1rem solid rgb(70, 72, 61);
+}
+.express:hover {
+  background: rgba(70, 72, 61, 0.25);
+}
+
+.mui {
+  border: 0.1rem solid rgb(0, 104, 208);
+}
+.mui:hover {
+  background: rgba(0, 104, 208, 0.25);
+}
+
+.typescript {
+  border: 0.1rem solid rgb(48, 116, 192);
+}
+.typescript:hover {
+  background: rgba(48, 116, 192, 0.25);
+}
+
 .mongodb {
   border: 0.1rem solid rgb(67, 153, 52);
 }
@@ -30,10 +86,12 @@
   background: rgba(67, 153, 52, 0.25);
 }
 
-.redux {
+.redux,
+.rtk {
   border: 0.1rem solid rgb(118, 74, 188);
 }
-.redux:hover {
+.redux:hover,
+.rtk:hover {
   background: rgba(118, 74, 188, 0.25);
 }
 
@@ -58,11 +116,18 @@
   background: rgb(0, 209, 178, 0.25);
 }
 
-.next {
+.nextjs {
   border: 2px solid rgb(0, 112, 243);
 }
-.next:hover {
+.nextjs:hover {
   background: rgba(0, 112, 243, 0.25);
+}
+
+.electronjs {
+  border: 2px solid rgb(149, 219, 231);
+}
+.electronjs:hover {
+  background: rgba(149, 219, 231, 0.25);
 }
 
 .tailwind {

@@ -1,37 +1,41 @@
 [
   {
     "id": 1,
-    "name": "Driwwwle",
-    "image": "https://imgur.com/kbGs6zH.png",
-    "description": "A platform for web developers to showcase their projects",
-    "tags": ["next", "node", "mongodb", "tailwind", "react-query"],
-    "source_code": "https://github.com/itsnitinr/driwwwle-v2",
-    "demo": "https://driwwwle.com/"
+    "title": "Trendex",
+    "name": "trendex",
+    "image": "/trendex.png",
+    "tags": ["reactjs", "node", "mongodb", "mui", "react-query", "redux", "typescript"],
+    "demo": "https://app.trendex.vip/top-50"
   },
   {
     "id": 2,
-    "name": "PCB Cupid",
-    "image": "https://imgur.com/tAZotn3.png",
-    "description": "E-commerce website for a PCB manufacturing company",
-    "tags": ["react", "node", "mongodb", "redux", "razorpay", "material-ui"],
-    "demo": "https://www.pcbcupid.com/"
+    "title": "Fit'Distance",
+    "name": "fitdistance",
+    "image": "/fitdistance.png",
+    "tags": ["reactjs", "node", "express", "typescript", "rtk", "material-ui"]
   },
   {
     "id": 3,
-    "name": "HealthyWays",
-    "image": "https://imgur.com/8FFqaX8.png",
-    "description": "A food ordering platform for healthy and home-cooked meals",
-    "tags": ["react", "node", "mongodb", "redux", "razorpay", "material-ui"],
-    "source_code": "https://github.com/itsnitinr/healthyways",
-    "demo": "https://healthyways.herokuapp.com/"
+    "title": "Douane'Dynamic",
+    "name": "douane",
+    "image": "/douane.png",
+    "tags": ["reactjs", "electronjs", "node"]
   },
   {
     "id": 4,
-    "name": "VSCode Portfolio",
+    "title": "R'Propre",
+    "name": "rpropre",
+    "image": "/rpropre.png",
+    "tags": ["wordpress", "html", "css", "javascript", "php"],
+    "demo": "https://rpropre.com/"
+  },
+  {
+    "id": 5,
+    "title": "VSCode Portfolio",
+    "name": "vscodeportfolio",
     "image": "https://imgur.com/mKkz0iz.png",
-    "description": "A themeable and developer-centric portfolio based on the VSCode",
-    "tags": ["next", "css-modules"],
+    "tags": ["nextjs", "css-modules"],
     "source_code": "https://github.com/itsnitinr/vscode-portfolio",
-    "demo": "http://vscode-portfolio.vercel.app/"
+    "demo": "/"
   }
 ]
