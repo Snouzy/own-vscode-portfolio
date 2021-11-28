@@ -3,7 +3,6 @@
 .container {
   display: flex;
   justify-content: center;
-  height: 75vh;
   flex-direction: column;
   position: relative;
 }
@@ -14,7 +13,18 @@
   line-height: 1.1;
   color: var(--bg-text);
   position: absolute;
+  top: 0;
   z-index: 1;
+}
+
+.illustration {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.illustration img {
+  border-radius: 20px;
 }
 
 .foreground {
@@ -41,7 +51,7 @@
   position: relative;
 }
 
-.bio::before,
+/* .bio::before,
 .bio::after {
   content: '';
   position: absolute;
@@ -49,7 +59,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-}
+} */
 
 .bio::before {
   background: var(--main-bg);
@@ -121,19 +131,8 @@
   .outlined {
     font-size: 2rem;
   }
-  .illustration {
-    height: 900px;
-    width: 700px;
-  }
 }
-@media screen and (min-width: 1200px) {
-  .illustration {
-    height: 500px;
-    width: 460px;
-    position: absolute;
-    right: -2rem;
-  }
-}
+
 /* iPad Pro */
 @media screen and (max-width: 1100px) {
   .background {
@@ -155,9 +154,6 @@
     font-size: 1.75rem;
     margin: 0.75rem auto 3rem;
   }
-  .illustration {
-    display: none;
-  }
 }
 
 /* iPad */
@@ -172,24 +168,16 @@
   .bio {
     font-size: 1.5rem;
   }
-  .illustration {
-    height: 550px;
-    width: 420px;
-    bottom: -50px;
-  }
 }
 
 @media screen and (orientation: landscape) and (max-width: 1050px) {
   .container {
     display: flex;
   }
-  .illustration {
-    display: none;
-  }
 }
 
 /* Phone */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
   .foreground {
     margin: 0;
   }
@@ -209,7 +197,7 @@
 }
 
 /** Very small phones */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   .buttonsContainer {
     display: flex;
     flex-direction: column;

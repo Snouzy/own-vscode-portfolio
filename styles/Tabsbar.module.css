@@ -1,18 +1,40 @@
 .tabs {
   display: flex;
-  /* flex-wrap: wrap; */
   background: var(--tabs-bg);
   overflow-x: auto;
+  position: fixed;
+  width: 100%;
+  top: var(--header_bar_height);
+  height: var(--tabs_bar_height);
+  z-index: 200;
+  left: 22.5vw;
+
+  scrollbar-width: 10px;
+  scrollbar-color: var(--accent-color);
+}
+
+.tabs::-webkit-scrollbar {
+  width: 15px;
+}
+
+.tabs::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-bg);
+  border-left: 1px solid #1e1f29;
+}
+
+.tabs::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border-left: 1px solid #1e1f29;
 }
 
 @media screen and (max-width: 900px) {
   .tabs {
-    width: 78vw;
+    left: 28vw;
   }
 }
 
 @media screen and (max-width: 600px) {
   .tabs {
-    width: 89.5vw;
+    left: 10vw;
   }
 }

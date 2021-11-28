@@ -5,7 +5,6 @@
   justify-content: space-between;
   width: 4.5vw;
   min-width: 40px;
-  height: calc(100vh - 30px - 25px);
 }
 
 .iconContainer {
@@ -32,12 +31,6 @@
 @media screen and (min-width: 2000px) {
   .sidebar {
     width: 2.5vw;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .sidebar {
-    width: 6vw;
   }
 }
 
