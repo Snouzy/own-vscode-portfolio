@@ -18,6 +18,7 @@ const ContactPage = () => {
       method: 'POST',
       body: JSON.stringify({ name, email, subject, message }),
     });
+    console.log('res:', res);
 
     if (res.ok) {
       alert(t('submitted'));

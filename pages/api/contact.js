@@ -25,7 +25,13 @@ export default async (req, res) => {
           ],
         },
         Email: {
-          email,
+          rich_text: [
+            {
+              text: {
+                content: email,
+              },
+            },
+          ],
         },
         Subject: {
           rich_text: [
@@ -49,7 +55,7 @@ export default async (req, res) => {
     });
     res.status(201).json({ msg: 'Success' });
   } catch (error) {
-    console.log(error);
-    res.status(500).json({ msg: 'Failed' });
+    console.log('Error with notion : ', error);
+    res.status(500).json({ msg: error });
   }
 };
