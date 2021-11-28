@@ -1,25 +1,33 @@
-import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
-import Trans from 'next-translate/Trans';
 
 import AboutLanguages from '../components/AboutLanguages';
 import AboutFrameworks from '../components/AboutFrameworks';
-import AboutCard from '../components/AboutCard';
+import Accordion from '../components/Accordion';
 
 import { getAbout } from './api/about';
 import { normalize } from '../utils/common.ts';
 
 import styles from '../styles/AboutPage.module.css';
 
-const LinkComponent = ({ children }) => {
-  return (
-    <Link href="https://vazeepro.com">
-      <a href="https://vazeepro.com" rel="noopener" target="_blank" className={styles.underline}>
-        {children}
-      </a>
-    </Link>
-  );
-};
+const accordionData = [
+  {
+    id: 1,
+    name: 'vazee',
+  },
+  {
+    id: 2,
+    name: 'netty',
+  },
+  {
+    id: 3,
+    name: 'freelance',
+  },
+  {
+    id: 4,
+    name: 'army',
+  },
+];
+
 const AboutPage = ({ data }) => {
   const { t } = useTranslation('about');
 
@@ -29,16 +37,10 @@ const AboutPage = ({ data }) => {
 
       <div className={styles.experiences}>
         <h2>{t('experiences')}</h2>
-
-        <p>
-          <Trans i18nKey="about:experiences-description" components={[<br />, <LinkComponent />]} />
-        </p>
+        <Accordion data={accordionData} />
       </div>
 
       <div className={styles.container}>
-        {/* <AboutCard title={data.age.title} key={data.id}>
-          <p className={styles.age}>{t(data.age.description)}</p>
-        </AboutCard> */}
         <AboutLanguages data={data.languages} />
         <AboutFrameworks data={data.frameworks} />
       </div>

@@ -8,5 +8,22 @@
   "languages-description": "HTML, CSS, JavaScript, ReactJS, Typescript, NodeJS",
   "frameworks": "Frameworks / libs",
   "frameworks-description": "NextJS, Redux, RTK, Mui, React Query",
-  "hobbies": "Hobbies"
+  "hobbies": "Hobbies",
+
+  "army": {
+    "title": "Army - Electronic warfare / 3 years",
+    "description": "#1 of the promotion <0/> <0/>› Specialist \"ILBS \": Interception, Location and Jamming of Telecommunications Systems. <0/>› Internal operations (Sentinel, maneuvers) <0/>› External operations: Mali / 3 borders (Niger - Burkina Faso - Mali)"
+  },
+  "freelance": {
+    "title": "Freelance, web developer / since 2 years",
+    "description": "- Various missions in React / Typescript and Node for various startups and agencies <0/> [IN SEARCH OF OTHER MISSIONS] <0/> <0/> - Creation / maintenance / custom / debug of e-commerce site (CMS wordpress , shopify) <0/> [DOES NOT LOOK FOR MISSIONS] <0/> <0/> - Creation of showcase sites & blogs <0/> [MISSIONS: POURQUOI PAS] <0/> <0/> - Realization / Modification of visual identity (business cards, logos, flyers ...) <0/> [NOT LOOKING FOR MISSIONS]"
+  },
+  "netty": {
+    "title": "Communication agency - Startup \"Netty \" / 2 months",
+    "description": "SaaS / Website in the field of # Real estate: <0/> <0/> * API key management administration interface <0/> * Addition of an iCalExport module to export the agenda for be able to import it into the “Calendar” application from Apple or Google Calendar. <0/> * Customization of graphic charters and SEO optimization of existing sites: addition of features, pixels (facebook, GA ...), iframes, widgets, responsive ...) <0/> * Various modifications in the software (forms, validation / confirmation popups, addition of fields, ...etc.) <0/> <0/> <1> https: / /www.netty.fr/ </1>"
+  },
+  "vazee": {
+    "title": "Startup in the foodtech \"Vazee \" for a year and a half",
+    "description": "- Development, maintenance & debugging of administrator interfaces on: <0/> <0/> * monitoring, creation and editing of advertising campaigns for various catering stakeholders <0/> * receipt of orders for kits of users (from reception to sending) <0/> * management of transactions for users of the mobile app (available on stores) VAZEE. <0/> <0/> - Integration of advertising campaigns via web platform for brands (Vittel, Schweppes, Kronenbourg ...) <0/> <0/> - Mobile first web application in direct relation with the back-end team (2 fronts and 6 backs) relating to the card online restaurants and their management by managers / restaurateurs. <0/> <0/> <1> https://vazeepro.com/ </1>"
+  }
 }
