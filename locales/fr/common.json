@@ -11,5 +11,6 @@
   "terminal": "Terminal",
   "window": "Fenêtre",
   "help": "Aide",
-  "problem": "Un problème est survenu :(. Essayez plus tard !"
+  "problem": "Un problème est survenu :(. Essayez plus tard !",
+  "powered_by": "Réalisé en NextJS"
 }

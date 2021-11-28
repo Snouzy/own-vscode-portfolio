@@ -1,3 +1,5 @@
+import useTranslation from 'next-translate/useTranslation';
+
 import GitCompareIcon from './icons/GitCompareIcon';
 import ErrorIcon from './icons/ErrorIcon';
 import WarningIcon from './icons/WarningIcon';
@@ -7,15 +9,11 @@ import VercelIcon from './icons/VercelIcon';
 import styles from '../styles/Bottombar.module.css';
 
 const Bottombar = () => {
+  const { t } = useTranslation('common');
   return (
     <footer className={styles.bottomBar}>
       <div className={styles.container}>
-        <a
-          href="https://github.com/itsnitinr/vscode-portfolio"
-          target="_blank"
-          rel="noreferrer"
-          className={styles.section}
-        >
+        <a href="https://github.com/itsnitinr/vscode-portfolio" target="_blank" rel="noreferrer" className={styles.section}>
           <GitCompareIcon className={styles.icon} />
           <p>main</p>
         </a>
@@ -29,7 +27,7 @@ const Bottombar = () => {
       <div className={styles.container}>
         <div className={styles.section}>
           <VercelIcon className={styles.icon} />
-          <p>Powered by Next.js</p>
+          <p>{t('powered_by')}</p>
         </div>
         <div className={styles.section}>
           <CheckIcon className={styles.icon} />

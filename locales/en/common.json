@@ -11,5 +11,6 @@
   "terminal": "Terminal",
   "window": "Window",
   "help": "Help",
-  "problem": "An error occurred :(. Try again later !"
+  "problem": "An error occurred :(. Try again later !",
+  "powered_by": "Powered by Next.js"
 }
