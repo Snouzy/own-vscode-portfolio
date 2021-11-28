@@ -71,6 +71,7 @@
   background: var(--main-bg);
   height: calc(100vh - var(--footer_bar_height));
 }
+
 @media screen and (max-width: 900px) {
   .content {
     margin-left: 28vw;

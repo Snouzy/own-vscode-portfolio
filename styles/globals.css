@@ -12,7 +12,7 @@ body {
   --footer_bar_height: 30px;
   --header_bar_height: 30px;
   --tabs_bar_height: 30px;
-  background-color: blue;
+  background-color: var(--main-bg);
 }
 
 /* Tags */

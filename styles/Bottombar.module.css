@@ -10,7 +10,7 @@
   position: fixed;
   width: 100%;
   bottom: 0;
-  height: 30px;
+  height: calc(env(safe-area-inset-bottom, 0) + var(--footer_bar_height));
 }
 
 .bottomBar a {

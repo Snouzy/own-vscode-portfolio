@@ -17,6 +17,16 @@
   z-index: 1;
 }
 
+.illustration {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.illustration img {
+  border-radius: 20px;
+}
+
 .foreground {
   z-index: 2;
   display: flex;
@@ -121,11 +131,6 @@
   .outlined {
     font-size: 2rem;
   }
-  .illustration {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 /* iPad Pro */
@@ -172,7 +177,7 @@
 }
 
 /* Phone */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
   .foreground {
     margin: 0;
   }
@@ -192,7 +197,7 @@
 }
 
 /** Very small phones */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   .buttonsContainer {
     display: flex;
     flex-direction: column;

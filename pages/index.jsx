@@ -31,7 +31,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-        <div style={{ margin: 20 }} className={styles.illustration}>
+        <div className={styles.illustration}>
           <Image src="/me.png" alt="A picture of me" height={300} width={290} />
         </div>
       </div>
