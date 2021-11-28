@@ -4,7 +4,7 @@ module.exports = nextTranslate({
     domains: ['res.cloudinary.com', 'avatars.githubusercontent.com', 'imgur.com'],
   },
   i18n: {
-    localeDetection: false,
+    localeDetection: true,
   },
   async headers() {
     return [
