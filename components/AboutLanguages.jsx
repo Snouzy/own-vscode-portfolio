@@ -5,7 +5,6 @@ import AboutCard from './AboutCard';
 import styles from '../styles/AboutPage.module.css';
 
 const AboutLanguages = ({ data }) => {
-  console.log('data:', data);
   return (
     <AboutCard title={data.title}>
       <ul style={{ marginLeft: '1rem' }} className={styles.code}>

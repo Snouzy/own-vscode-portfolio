@@ -37,17 +37,7 @@ const Explorer = () => {
               <Image src="/js_icon.svg" alt="JavaScript Icon" height={18} width={18} /> <p>projects.js</p>
             </div>
           </Link>
-          {/* <Link href="/articles">
-            <div className={styles.file}>
-              <Image
-                src="/json_icon.svg"
-                alt="JSON Icon"
-                height={18}
-                width={18}
-              />{' '}
-              <p>articles.json</p>
-            </div>
-          </Link> */}
+
           <Link href="/github">
             <div className={styles.file}>
               <Image src="/markdown_icon.svg" alt="Markdown Icon" height={18} width={18} /> <p>github.md</p>

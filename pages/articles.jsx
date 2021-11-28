@@ -3,7 +3,7 @@ import useTranslation from 'next-translate/useTranslation';
 // import ArticleCard from '../components/ArticleCard';
 // import styles from '../styles/ArticlesPage.module.css';
 
-const ArticlesPage = ({}) => {
+const ArticlesPage = () => {
   const { t } = useTranslation('articles');
   return null;
   // return (
@@ -22,7 +22,5 @@ const ArticlesPage = ({}) => {
   //   </>
   // );
 };
-
-export async function getStaticProps() {}
 
 export default ArticlesPage;

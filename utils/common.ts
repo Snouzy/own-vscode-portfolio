@@ -6,7 +6,6 @@ export function normalize<T>(array: T[], indexKey: keyof T): Collection<T> {
     const key = element[indexKey];
     normalizedObject[key] = element;
   }
-  console.log('normalizedObject:', normalizedObject);
   return normalizedObject as Collection<T>;
 }
 

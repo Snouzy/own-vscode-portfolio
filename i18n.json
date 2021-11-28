@@ -8,7 +8,6 @@
     "/about": ["about"],
     "/contact": ["contact"],
     "/projects": ["projects"],
-    "/github": ["github"],
-    "articles": ["articles"]
+    "/github": ["github"]
   }
 }

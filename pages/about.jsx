@@ -48,8 +48,6 @@ const AboutPage = ({ data }) => {
 
 export async function getStaticProps() {
   const data = getAbout();
-  console.log('data:', data);
-  console.log('data:', normalize(data, 'title'));
 
   return {
     props: { title: 'About', data: normalize(data, 'title') },

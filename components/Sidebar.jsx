@@ -30,11 +30,11 @@ const Sidebar = () => {
             <CodeIcon fill={router.pathname === '/projects' ? 'rgb(225, 228, 232)' : 'rgb(106, 115, 125)'} className={styles.icon} />
           </div>
         </Link>
-        <Link href="/articles">
+        {/* <Link href="/articles">
           <div className={`${styles.iconContainer} ${router.pathname === '/articles' && styles.active}`}>
             <PencilIcon fill={router.pathname === '/articles' ? 'rgb(225, 228, 232)' : 'rgb(106, 115, 125)'} className={styles.icon} />
           </div>
-        </Link>
+        </Link> */}
         <Link href="/contact">
           <div className={`${styles.iconContainer} ${router.pathname === '/contact' && styles.active}`}>
             <MailIcon fill={router.pathname === '/contact' ? 'rgb(225, 228, 232)' : 'rgb(106, 115, 125)'} className={styles.icon} />
