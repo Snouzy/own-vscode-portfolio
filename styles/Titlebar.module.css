@@ -1,6 +1,5 @@
 .titlebar {
   background: var(--titlebar-bg);
-  height: 30px;
   padding: 0 0.5rem;
   display: flex;
   align-items: center;
@@ -9,6 +8,12 @@
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 0.85rem;
   border-bottom: 1px solid #191d20;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: var(--header_bar_height);
+  z-index: 200;
 }
 
 .items {

@@ -8,6 +8,13 @@
   box-sizing: border-box;
 }
 
+body {
+  --footer_bar_height: 30px;
+  --header_bar_height: 30px;
+  --tabs_bar_height: 30px;
+  background-color: blue;
+}
+
 /* Tags */
 .wordpress {
   border: 0.1rem solid rgb(29, 136, 184);

@@ -1,6 +1,5 @@
 .bottomBar {
   background: var(--bottombar-bg);
-  height: 25px;
   border-top: 1px solid var(--bottombar-border);
   color: rgb(225, 228, 232);
   padding: 0 0.5rem;
@@ -8,6 +7,10 @@
   align-items: center;
   justify-content: space-between;
   font-size: 0.85rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 30px;
 }
 
 .bottomBar a {
