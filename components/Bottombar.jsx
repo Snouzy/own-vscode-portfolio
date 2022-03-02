@@ -13,7 +13,7 @@ const Bottombar = () => {
   return (
     <footer className={styles.bottomBar}>
       <div className={styles.container}>
-        <a href="https://github.com/itsnitinr/vscode-portfolio" target="_blank" rel="noreferrer" className={styles.section}>
+        <a href="https://github.com/snouzy/vscode-portfolio" target="_blank" rel="noreferrer" className={styles.section}>
           <GitCompareIcon className={styles.icon} />
           <p>main</p>
         </a>

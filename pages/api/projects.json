@@ -35,7 +35,7 @@
     "name": "vscodeportfolio",
     "image": "https://imgur.com/mKkz0iz.png",
     "tags": ["nextjs", "css-modules"],
-    "source_code": "https://github.com/itsnitinr/vscode-portfolio",
+    "source_code": "https://github.com/snouzy/vscode-portfolio",
     "demo": "/"
   }
 ]
