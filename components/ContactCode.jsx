@@ -22,7 +22,7 @@ const ContactCode = () => {
       </p>
       <p className={styles.line}>
         &nbsp;&nbsp;&nbsp;github(pro):{' '}
-        <a href="https://github.com/itsnitinr" target="_blank" rel="noopener">
+        <a href="https://github.com/mathias-bradi" target="_blank" rel="noopener">
           mathias-bradi
         </a>
         ;
