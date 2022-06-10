@@ -1,4 +1,14 @@
 {
+  "seo": {
+    "base": {
+      "title": "Mathias Bradiceanu, front-end reactJS and nodeJS developer",
+      "description": "Mathias Bradiceanu's portfolio, front-end reactJS and nodeJS developer"
+    },
+    "github": {
+      "title": "Github",
+      "description": "Profil github of Mathias Bradiceanu developer"
+    }
+  },
   "home": "home",
   "language-name-en": "English 🇬🇧",
   "language-name-fr": "Français 🇫🇷",
