@@ -9,7 +9,7 @@ const CustomHead = ({ title }) => {
       <meta property="og:title" content="Bradiceanu Mathias's Portfolio" />
       <meta property="og:description" content="A front-end developer building websites in React.JS and Typescript." />
       <meta property="og:image" content="https://imgur.com/4zi5KkQ.png" />
-      <meta property="og:url" content="https://vscode-portfolio.vercel.app" />
+      <meta property="og:url" content="https://snouzy.com" />
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
   );
