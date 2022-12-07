@@ -15,15 +15,15 @@
     "description": "Major de promo<0/><0/>› Spécialiste \"ILBS\" : Interception, Localisation et Brouillage des Systèmes de télécommunication.<0/>› Opérations intérieures (Sentinelle, manœuvres)<0/>› Opération extérieure: Mali / 3 frontières (Niger - Burkina Faso - Mali)"
   },
   "freelance": {
-    "title": "Freelance, développeur web / depuis 2 ans",
-    "description": "- Diverses missions en React/Typescript et Node pour diverses startup et agences<0/>[EN RECHERCHE D’AUTRES MISSIONS]<0/><0/>- Création / maintenance / custom / débug de site e-commerces (CMS wordpress, shopify)<0/>[NE RECHERCHE PAS DE MISSIONS]<0/><0/>- Création de sites vitrine & blogs<0/>[MISSIONS: POURQUOI PAS]<0/><0/>- Réalisation / Modification d'identité visuelle (cartes de visite, logos, flyers...)<0/>[NE RECHERCHE PAS DE MISSIONS]"
+    "title": "Freelance, développeur web & mobile / depuis 3 ans @Strasbourg @Paris @Remote",
+    "description": "- Diverses missions en React/ReactNative/Typescript et Node pour diverses startup et agences"
   },
   "netty": {
-    "title": "Agence de communication - Startup \"Netty\" / 2 mois",
+    "title": "Agence de communication - Startup \"Netty\" / 2 mois @Strasbourg",
     "description": "SaaS/Site web dans le domaine de l'#Immobilier : <0/><0/>* Interface d'administration de gestion de clé API<0/>* Ajout d'un module iCalExport afin d’exporter l’agenda pour pouvoir l’importer dans l’application “Calendrier” d’Apple ou Google Agenda.<0/>* Personnalisation des chartes graphiques et optimisation SEO des sites déjà existants : ajout de fonctionnalités, pixels (facebook, GA...), iframes, widgets, responsive...)<0/>* Modifications diverses dans le SaaS (formulaires, popups de validation / confirmation, ajout de champs... etc.) <0/><0/><1>https://www.netty.fr/</1>"
   },
   "vazee": {
-    "title": "Startup dans la foodtech \"Vazee\" depuis 1 an et demi",
+    "title": "Startup dans la foodtech \"Eazee-link\" anciennement \"Vazee\" / 2 ans @Strasbourg",
     "description": "- Développement, maintenance & debug d'interfaces administrateur sur :<0/><0/>* le suivi, la création et l'édition des campagnes publicitaires pour différents acteurs de la restauration<0/>* la réception des commandes de kits des utilisateurs (de la réception jusqu'à l'envoi)<0/>* la gestion des transactions des utilisateurs de l'app mobile (disponible sur les stores) VAZEE.<0/><0/>- Intégration de campagnes publicitaires via plateforme web pour les marques (Vittel, Schweppes, Kronenbourg...)<0/><0/>- Application web mobile first en relation directe avec l’équipe back-end (2 fronts et 6 backs) relative à la carte en ligne des restaurants et de sa gestion par les managers / restaurateurs.<0/><0/><1>https://vazeepro.com/</1>"
   }
 }

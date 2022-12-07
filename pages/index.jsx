@@ -32,7 +32,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className={styles.illustration}>
-          <Image src="/me.png" alt="A picture of me" height={300} width={290} />
+          <Image src="/me.JPG" alt="A picture of me" height={300} width={290} />
         </div>
       </div>
     </div>

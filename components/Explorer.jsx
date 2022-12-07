@@ -19,7 +19,7 @@ const Explorer = () => {
         <div className={styles.files} style={portfolioOpen ? { display: 'block' } : { display: 'none' }}>
           <Link href="/">
             <div className={styles.file}>
-              <Image src="/react_icon.svg" alt="React Icon" height={18} width={18} /> <p>home.jsx</p>
+              <Image src="/react_icon.svg" alt="React Icon" height={18} width={18} /> <p>home.tsx</p>
             </div>
           </Link>
           <Link href="/about">

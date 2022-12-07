@@ -2,5 +2,7 @@
   "latest-repos_one": "{{count}} dernier repos mis à jour",
   "latest-repos_many": "{{count}} derniers repos mis à jour",
   "latest-repos_other": "{{count}} derniers repos mis à jour",
-  "problem": "Un problème est survenu lors de la récupération des données avec l'api GITHUB :(. Essayez plus tard !"
+  "problem": "Un problème est survenu lors de la récupération des données avec l'api GITHUB :(. Essayez plus tard !",
+  "problem_user": "Un problème est survenu lors de la récupération du user",
+  "problem_repo": "Un problème est survenu lors de la récupération des repos"
 }

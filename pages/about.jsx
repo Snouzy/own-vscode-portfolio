@@ -12,15 +12,15 @@ import styles from '../styles/AboutPage.module.css';
 const accordionData = [
   {
     id: 1,
-    name: 'vazee',
+    name: 'freelance',
   },
   {
     id: 2,
-    name: 'netty',
+    name: 'vazee',
   },
   {
     id: 3,
-    name: 'freelance',
+    name: 'netty',
   },
   {
     id: 4,
