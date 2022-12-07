@@ -16,6 +16,20 @@ body {
 }
 
 /* Tags */
+.zustand {
+  border: 0.1rem solid rgb(86, 44, 61);
+}
+.zustand:hover {
+  background: rgba(86, 44, 61, 0.25);
+}
+
+.jotai {
+  border: 0.1rem solid rgb(0, 0, 0);
+}
+.jotai:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
 .wordpress {
   border: 0.1rem solid rgb(29, 136, 184);
 }
@@ -51,11 +65,18 @@ body {
   background: rgba(119, 123, 179, 0.25);
 }
 
-.reactjs {
+.reactjs, .react-native {
   border: 0.1rem solid rgb(97, 218, 251);
 }
-.reactjs:hover {
+.reactjs:hover, .react-native:hover {
   background: rgba(97, 218, 251, 0.25);
+}
+
+.docker {
+  border: 0.1rem solid rgb(37, 150, 236);
+}
+.docker:hover {
+  background: rgba(37, 150, 236, 0.25);
 }
 
 .node {
