@@ -1,6 +1,39 @@
 [
   {
     "id": 1,
+    "title": "Bestrong",
+    "name": "bestrong",
+    "image": "/bestrong.jpg",
+    "tags": ["react-native", "reactjs", "typescript", "redux", "docker"],
+    "demo": "https://bestrong-app.com"
+  },
+
+  {
+    "id": 1,
+    "title": "Smartch",
+    "name": "smartch",
+    "image": "/smartch.jpg",
+    "tags": ["reactjs", "typescript", "javascript", "redux", "rtk", "nextjs"],
+    "demo": "https://www.smartch.fr/"
+  },
+  {
+    "id": 1,
+    "title": "Airbus",
+    "name": "airbus",
+    "image": "/airbus.jpg",
+    "tags": ["reactjs", "typescript", "javascript"],
+    "demo": "https://www.airbus.com/en"
+  },
+  {
+    "id": 1,
+    "title": "Eazee-link",
+    "name": "eazee-link",
+    "image": "/eazee-link.jpg",
+    "tags": ["reactjs", "typescript", "zustand", "jotai", "node", "express"],
+    "demo": "https://eazee-link.com"
+  },
+  {
+    "id": 1,
     "title": "Trendex",
     "name": "trendex",
     "image": "/trendex.png",

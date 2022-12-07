@@ -2,6 +2,22 @@
   "title": "Ce que j'ai pu réaliser :",
   "source_code": "Source",
   "live_demo": "Démonstration",
+  "eazee-link": {
+    "subtitle": "Plateforme SaaS dans la FoodTech",
+    "description": "Développement d’applications web et d'interfaces d’administration (pour users & interne, restaurateurs)"
+  },
+  "smartch": {
+    "subtitle": "Plateforme SaaS dans l'EdTech (éducation)",
+    "description": "Développement de la plateforme de formation \"Andragog\" destinée aux entreprises"
+  },
+  "airbus": {
+    "subtitle": "Widgets pour l'intranet",
+    "description": "Développement de widgets pour l'intranet d'Airbus. <0/>Les widgets sont des applications web qui permettent aux utilisateurs de l'intranet d'Airbus de consulter des informations en temps réel. <0/>Ex: Traffic aérien autour de la base"
+  },
+  "bestrong": {
+    "subtitle": "Application mobile & e-commerce",
+    "description": "Développement & maintenance de l’application mobile (refonte), du site web e-commerce / de la webapp et de l’interface d’administration pour l'application Bestrong pour l'influenceuse @karoline.ro et son compagnon @rudy.fgt"
+  },
   "trendex": {
     "subtitle": "Startup dans le domaine du #Trading",
     "description": "Développement d'une plateforme de trading (achat-vente-revente) de parts. <0/>Ajout de fonctionnalités, debug et améliorations de l'existant."
