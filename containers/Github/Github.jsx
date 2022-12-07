@@ -9,7 +9,6 @@ import RepoCard from '../../components/RepoCard';
 import styles from '../../styles/GithubPage.module.css';
 
 const GithubPage = ({ entities }) => {
-
   const theme = {
     level0: '#161B22',
     level1: '#0e4429',
@@ -24,6 +23,9 @@ const GithubPage = ({ entities }) => {
       {entities && entities.length ? (
         entities.map(({ user, repos }) => {
           if (user.message === 'Bad credentials' || repos.message === 'Bad credentials') return null;
+          if (user.message && user.documentation_url && repos.message && repos.documentation_url) return <><h3>{t('problem')}</h3><br/><span>{user.message}</span><br/><span>{repos.message}</span></>;
+          if (user.message && user.documentation_url) return <h3>{t('problem_user')}</h3>;
+          if (repos.message && repos.documentation_url) return <h3>{t('problem_repo')}</h3>;
           return (
             <React.Fragment key={user.id}>
               <div className={styles.user}>
@@ -39,14 +41,14 @@ const GithubPage = ({ entities }) => {
                 </div>
               </div>
               <h2>{t('latest-repos', { count: repos.length })}</h2>
-              {/* <div className={styles.container}>
-              {repos.map((repo) => (
-                <RepoCard key={repo.id} repo={repo} />
-              ))}
-            </div> */}
-              <div className={styles.contributions}>
-                <GitHubCalendar username={user.login} theme={theme} hideColorLegend />
+              <div className={styles.container}>
+                {repos.map((repo) => (
+                  <RepoCard key={repo.id} repo={repo} />
+                ))}
               </div>
+              {/* <div className={styles.contributions}>
+                <GitHubCalendar username={user.login} theme={theme} hideColorLegend />
+              </div> */}
             </React.Fragment>
           );
         })

@@ -21,13 +21,6 @@ const ContactCode = () => {
         ;
       </p>
       <p className={styles.line}>
-        &nbsp;&nbsp;&nbsp;github(pro):{' '}
-        <a href="https://github.com/mathias-bradi" target="_blank" rel="noopener">
-          mathias-bradi
-        </a>
-        ;
-      </p>
-      <p className={styles.line}>
         &nbsp;&nbsp;&nbsp;github(perso):{' '}
         <a href="https://github.com/Snouzy" target="_blank" rel="noopener">
           Snouzy
