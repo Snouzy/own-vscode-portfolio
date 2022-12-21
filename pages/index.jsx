@@ -4,7 +4,6 @@ import Image from 'next/image';
 import useTranslation from 'next-translate/useTranslation';
 import Trans from 'next-translate/Trans';
 
-import Illustration from '../components/Illustration';
 import styles from '../styles/HomePage.module.css';
 
 export default function HomePage() {
@@ -32,7 +31,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className={styles.illustration}>
-          <Image src="/me.JPG" alt="A picture of me" height={300} width={290} />
+          <Image src="/me-removebg.png" alt="A picture of me" height={300} width={290} />
         </div>
       </div>
     </div>

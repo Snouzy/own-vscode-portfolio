@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import useTranslation from 'next-translate/useTranslation';
-import GitHubCalendar from 'react-github-calendar';
 
 import RepoCard from '../../components/RepoCard';
 
@@ -9,15 +8,8 @@ import RepoCard from '../../components/RepoCard';
 import styles from '../../styles/GithubPage.module.css';
 
 const GithubPage = ({ entities }) => {
-  const theme = {
-    level0: '#161B22',
-    level1: '#0e4429',
-    level2: '#006d32',
-    level3: '#26a641',
-    level4: '#39d353',
-  };
-
   const { t } = useTranslation('github');
+
   return (
     <>
       {entities && entities.length ? (
@@ -46,9 +38,6 @@ const GithubPage = ({ entities }) => {
                   <RepoCard key={repo.id} repo={repo} />
                 ))}
               </div>
-              {/* <div className={styles.contributions}>
-                <GitHubCalendar username={user.login} theme={theme} hideColorLegend />
-              </div> */}
             </React.Fragment>
           );
         })
