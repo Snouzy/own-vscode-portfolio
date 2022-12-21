@@ -22,7 +22,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--accent-color);
+  border-radius: 5px;
 }
+
 .illustration img {
   border-radius: 20px;
 }
@@ -43,7 +46,6 @@
 }
 
 .bio {
-  width: max-content;
   color: #eee;
   font-size: 1.5rem;
   font-weight: 300;

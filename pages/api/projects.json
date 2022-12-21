@@ -1,6 +1,15 @@
 [
   {
     "id": 1,
+    "title": "Santeol x SESAM-Vitale",
+    "name": "santeol",
+    "image": "/santeol.png",
+    "tags": ["reactjs", "typescript", "redux", "docker"],
+    "demo": "https://santeol.com/"
+  },
+
+  {
+    "id": 2,
     "title": "Bestrong",
     "name": "bestrong",
     "image": "/bestrong.jpg",
@@ -9,7 +18,7 @@
   },
 
   {
-    "id": 1,
+    "id": 2,
     "title": "Smartch",
     "name": "smartch",
     "image": "/smartch.jpg",
@@ -17,7 +26,7 @@
     "demo": "https://www.smartch.fr/"
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "Airbus",
     "name": "airbus",
     "image": "/airbus.jpg",
@@ -25,7 +34,7 @@
     "demo": "https://www.airbus.com/en"
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "Eazee-link",
     "name": "eazee-link",
     "image": "/eazee-link.jpg",
@@ -33,7 +42,7 @@
     "demo": "https://eazee-link.com"
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "Trendex",
     "name": "trendex",
     "image": "/trendex.png",
