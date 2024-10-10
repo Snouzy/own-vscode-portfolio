@@ -1,73 +1,96 @@
-  // Fonction helper (à implémenter selon votre logique de stockage)
-  async function getOriginalUrl(shortCode) {
-    // Logique pour récupérer l'URL originale à partir du shortCode
-    // Cela pourrait impliquer une requête à votre base de données
-    return 'https://example.com/your-long-url';
-  }
-  // Pages API Next.js (pages/api/redirect/[shortCode].js)
-export default function handler(req, res) {
+// pages/api/redirect/[shortCode].js
+export default async function handler(req, res) {
     const { shortCode } = req.query;
-    const originalUrl = getOriginalUrl(shortCode); // Implémentez cette fonction
-    const userAgent = req.headers['user-agent'];
-    const isInstagram = userAgent.includes('Instagram');
   
-    if (isInstagram) {
+    // Function to get the actual URL from your database
+    const getActualUrl = async (code) => {
+      // In a real implementation, fetch the actual URL from your database
+      return `https://your-actual-destination.com/${code}`;
+    };
+  
+    try {
+      const actualUrl = await getActualUrl(shortCode);
+  
+      // Set headers to prevent caching
+      res.setHeader('Cache-Control', 'no-store, max-age=0');
+      res.setHeader('Pragma', 'no-cache');
+  
+      // Attempt to break out of the in-app browser
       res.setHeader('Content-Type', 'text/html');
       res.send(`
         <html>
           <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="refresh" content="0;url=${actualUrl}">
             <script>
-              (function() {
-                function attemptWebViewEscape() {
-                  // Tentative 1: Forcer le mode plein écran
-                  if (document.documentElement.requestFullscreen) {
-                    document.documentElement.requestFullscreen();
-                  }
-  
-                  // Tentative 2: Exploiter les liens profonds
-                  var deepLinks = [
-                    'googlechrome://',
-                    'firefox://',
-                    'opera://',
-                    'safari://',
-                    'com.android.browser://'
-                  ];
-                  deepLinks.forEach(link => {
-                    var iframe = document.createElement('iframe');
-                    iframe.style.display = 'none';
-                    iframe.src = link + encodeURIComponent('${originalUrl}');
-                    document.body.appendChild(iframe);
-                  });
-  
-                  // Tentative 3: Utiliser une redirection avec un protocole personnalisé
-                  window.location.href = 'web+${shortCode}://' + encodeURIComponent('${originalUrl}');
-  
-                  // Tentative 4: Exploiter les API de partage avancées
-                  if (navigator.canShare && navigator.canShare({ url: '${originalUrl}' })) {
-                    navigator.share({ url: '${originalUrl}' });
-                  }
-  
-                  // Tentative 5: Forcer une redirection après un court délai
-                  setTimeout(() => {
-                    window.top.location.href = '${originalUrl}';
-                  }, 100);
-                }
-  
-                // Exécution immédiate
-                attemptWebViewEscape();
-  
-                // Répéter les tentatives
-                setInterval(attemptWebViewEscape, 500);
-              })();
+              window.onload = function() {
+                window.location.replace("${actualUrl}");
+              }
             </script>
           </head>
           <body>
-            <p>Chargement en cours...</p>
+            <h1>Redirecting...</h1>
+            <p>If you are not redirected, <a href="${actualUrl}" target="_blank" rel="noopener noreferrer">click here</a>.</p>
           </body>
         </html>
       `);
-    } else {
-      res.redirect(301, originalUrl);
+    } catch (error) {
+      res.status(500).json({ error: 'Failed to redirect' });
     }
+  }
+  
+  // pages/[shortCode].js
+  import { useEffect } from 'react';
+  import { useRouter } from 'next/router';
+  
+  export default function Redirect({ actualUrl }) {
+    const router = useRouter();
+  
+    useEffect(() => {
+      if (actualUrl) {
+        window.location.replace(actualUrl);
+      }
+    }, [actualUrl]);
+  
+    return (
+      <div style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center', paddingTop: '50px' }}>
+        <h1>Redirecting you to your destination...</h1>
+        <p>If you are not redirected automatically, <a href={actualUrl} target="_blank" rel="noopener noreferrer">click here</a>.</p>
+      </div>
+    );
+  }
+  
+  export async function getServerSideProps(context) {
+    const { shortCode } = context.params;
+    
+    // Function to get the actual URL from your database
+    const getActualUrl = async (code) => {
+      // In a real implementation, fetch the actual URL from your database
+      return `https://your-actual-destination.com/${code}`;
+    };
+  
+    const actualUrl = await getActualUrl(shortCode);
+  
+    return {
+      props: { actualUrl },
+    };
+  }
+  
+  // pages/api/shortener.js
+  export default function handler(req, res) {
+    if (req.method === 'POST') {
+      const { url } = req.body;
+      // Generate a short code and save it to your database
+      const shortCode = generateShortCode();
+      // Save the mapping of shortCode to url in your database
+      
+      res.status(200).json({ shortCode });
+    } else {
+      res.status(405).end(); // Method Not Allowed
+    }
+  }
+  
+  function generateShortCode() {
+    // Implement your short code generation logic here
+    return 'abc123'; // This is just a placeholder
   }
