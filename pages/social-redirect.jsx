@@ -10,7 +10,7 @@ const SocialRedirect = () => {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
       // Détection Instagram et Android
-      if (userAgent.includes('Instagram') && userAgent.includes('Android')) {
+      if (userAgent.includes('Instagram')) {
         // Simuler un téléchargement de fichier pour forcer l'ouverture du lien dans le navigateur
         const dummyPDF = new Blob([], { type: 'application/pdf' });
         const url = URL.createObjectURL(dummyPDF);
