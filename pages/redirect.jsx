@@ -6,6 +6,10 @@ const RedirectPage = () => {
 
 
 
+  useEffect(() => { 
+    const link = 'https://imgur.com/error/404';
+     const safariLink = `x-web-search://?${link}`; window.location.href = safariLink; },
+    []);
 
   useEffect(() => {
     const isInAppBrowser = () => {
@@ -31,7 +35,7 @@ const RedirectPage = () => {
     <div>
       <p>Redirection en cours...</p>
     
-      <a href="https://snouzy.com" target='_blank' download>Open in browser</a>
+      <a href="https://snouzy.com/nibrowser=no" target='_blank' download>Open in browser</a>
       <button
         id="open-browser-btn"
         style={{ display: 'none' }}
