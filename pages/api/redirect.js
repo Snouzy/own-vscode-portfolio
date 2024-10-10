@@ -4,8 +4,7 @@
     // Cela pourrait impliquer une requête à votre base de données
     return 'https://example.com/your-long-url';
   }
-  
-// Pages API Next.js (pages/api/redirect/[shortCode].js)
+  // Pages API Next.js (pages/api/redirect/[shortCode].js)
 export default function handler(req, res) {
     const { shortCode } = req.query;
     const originalUrl = getOriginalUrl(shortCode); // Implémentez cette fonction
@@ -21,34 +20,41 @@ export default function handler(req, res) {
             <script>
               (function() {
                 function attemptBypass() {
-                  // Tentative 1: Forcer l'ouverture d'une nouvelle fenêtre
-                  var newWindow = window.open('${originalUrl}', '_system');
-                  if (newWindow) {
-                    window.close();
-                    return;
+                  // Tentative 1: Exploiter les API de partage
+                  if (navigator.share) {
+                    navigator.share({url: '${originalUrl}'}).catch(() => {});
                   }
   
-                  // Tentative 2: Utiliser la navigation programmatique
-                  try {
-                    window.location.replace('${originalUrl}');
-                  } catch (e) {
-                    console.error('Erreur lors de la redirection:', e);
-                  }
+                  // Tentative 2: Utiliser une iframe cachée
+                  var iframe = document.createElement('iframe');
+                  iframe.style.display = 'none';
+                  iframe.src = '${originalUrl}';
+                  document.body.appendChild(iframe);
   
-                  // Tentative 3: Manipulation du DOM
-                  document.body.innerHTML = '<iframe src="${originalUrl}" style="position:fixed;top:0;left:0;width:100%;height:100%;border:none;"></iframe>';
+                  // Tentative 3: Manipulation de l'historique
+                  history.pushState(null, '', '${originalUrl}');
+                  history.go(0);
+  
+                  // Tentative 4: Redirection après un court délai
+                  setTimeout(() => {
+                    window.location.href = '${originalUrl}';
+                  }, 100);
                 }
   
-                // Exécuter immédiatement et répéter plusieurs fois
+                // Exécuter les tentatives
                 attemptBypass();
-                for (var i = 0; i < 5; i++) {
-                  setTimeout(attemptBypass, i * 500);
-                }
+  
+                // Surveiller les changements de visibilité de la page
+                document.addEventListener('visibilitychange', function() {
+                  if (!document.hidden) {
+                    attemptBypass();
+                  }
+                });
               })();
             </script>
           </head>
           <body>
-            <p>Redirection en cours...</p>
+            <p>Chargement en cours...</p>
           </body>
         </html>
       `);
