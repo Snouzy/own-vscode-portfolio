@@ -5,15 +5,14 @@ const RedirectPage = () => {
   const { slug } = router.query;
 
 
-const isInAppBrowser = () => {
-    const ua = navigator.userAgent || navigator.vendor || window.opera;
-    // Détecter Instagram ou d'autres in-app browsers
-    return /instagram|fb_iab|fb4a|messenger/i.test(ua);
-  };
 
-  
+
   useEffect(() => {
-   
+    const isInAppBrowser = () => {
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        // Détecter Instagram ou d'autres in-app browsers
+        return /instagram|fb_iab|fb4a|messenger/i.test(ua);
+      };
 
     if (isInAppBrowser()) {
       // Affiche un message indiquant à l'utilisateur d'ouvrir le lien dans son navigateur
@@ -31,12 +30,7 @@ const isInAppBrowser = () => {
   return (
     <div>
       <p>Redirection en cours...</p>
-      {isInAppBrowser() && (
-        <p>
-          <b>Attention :</b> vous devez ouvrir ce lien dans votre navigateur pour
-          pouvoir le voir.
-        </p>
-      )}
+    
       <a href={location.href} target='_blank' download>Open in browser</a>
       <button
         id="open-browser-btn"
