@@ -1,3 +1,10 @@
+  // Fonction helper (à implémenter selon votre logique de stockage)
+  async function getOriginalUrl(shortCode) {
+    // Logique pour récupérer l'URL originale à partir du shortCode
+    // Cela pourrait impliquer une requête à votre base de données
+    return 'https://example.com/your-long-url';
+  }
+  
 // Pages API Next.js (pages/api/redirect/[shortCode].js)
 export default function handler(req, res) {
     const { shortCode } = req.query;
