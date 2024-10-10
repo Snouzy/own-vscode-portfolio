@@ -31,7 +31,7 @@ const RedirectPage = () => {
     <div>
       <p>Redirection en cours...</p>
     
-      <a href={location.href} target='_blank' download>Open in browser</a>
+      <a href="https://snouzy.com" target='_blank' download>Open in browser</a>
       <button
         id="open-browser-btn"
         style={{ display: 'none' }}
