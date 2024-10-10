@@ -75,22 +75,3 @@ export default async function handler(req, res) {
       props: { actualUrl },
     };
   }
-  
-  // pages/api/shortener.js
-  export default function handler(req, res) {
-    if (req.method === 'POST') {
-      const { url } = req.body;
-      // Generate a short code and save it to your database
-      const shortCode = generateShortCode();
-      // Save the mapping of shortCode to url in your database
-      
-      res.status(200).json({ shortCode });
-    } else {
-      res.status(405).end(); // Method Not Allowed
-    }
-  }
-  
-  function generateShortCode() {
-    // Implement your short code generation logic here
-    return 'abc123'; // This is just a placeholder
-  }
