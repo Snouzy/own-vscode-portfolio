@@ -1,5 +1,9 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+const RedirectPage = () => {
+  const router = useRouter();
+  const { slug } = router.query;
+
 
 const isInAppBrowser = () => {
     const ua = navigator.userAgent || navigator.vendor || window.opera;
@@ -7,10 +11,7 @@ const isInAppBrowser = () => {
     return /instagram|fb_iab|fb4a|messenger/i.test(ua);
   };
 
-const RedirectPage = () => {
-  const router = useRouter();
-  const { slug } = router.query;
-
+  
   useEffect(() => {
    
 
