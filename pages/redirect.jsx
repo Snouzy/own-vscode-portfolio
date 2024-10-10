@@ -14,10 +14,10 @@ const RedirectPage = () => {
 
     if (isInAppBrowser()) {
       // Si c'est un in-app browser, rediriger vers le navigateur par défaut
-      window.location.href = `https://snouzy.com`;
+      window.location.href = `https://google.com`;
     } else {
       // Redirection classique
-      window.location.href = `https://snouzy.com`;
+      window.location.href = `https://google.com`;
     }
   }, [slug]);
 

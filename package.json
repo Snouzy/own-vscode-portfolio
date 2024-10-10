@@ -1,18 +1,21 @@
 {
-  "name": "vscode-portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev -p 3009",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@notionhq/client": "^0.2.2",
-    "next": "10.1.3",
-    "next-translate": "^1.2.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-github-calendar": "^2.0.2"
-  }
+    "name": "vscode-portfolio",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev -p 3009",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "@notionhq/client": "^2.2.15",
+        "next": "13.4.3",
+        "next-translate": "^2.6.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-github-calendar": "^4.4.1"
+    },
+    "devDependencies": {
+        "next-translate-plugin": "^2.6.2"
+    }
 }

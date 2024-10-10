@@ -2,7 +2,7 @@ import { axiosGet } from '../http'
 
 const names = process.env.NEXT_PUBLIC_GITHUB_USERNAME.split(' ');
 
-export const getRepos = () => {
+export const getRepos = async () => {
 
   const entities = await Promise.all(
     names.map(async (name) => {
