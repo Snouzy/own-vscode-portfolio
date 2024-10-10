@@ -1,84 +1,73 @@
-// pages/[shortCode].js
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
-export default function Redirect() {
-  const router = useRouter();
-  const { shortCode } = router.query;
-
-  useEffect(() => {
-    if (!shortCode) return;
-
-    const getActualUrl = async (code) => {
-      // In a real implementation, fetch the actual URL from your database
-      return `https://your-actual-destination.com/${code}`;
-    };
-
-    const bypass = async () => {
-      const actualUrl = await getActualUrl(shortCode);
-      
-      // Try multiple methods to break out of the in-app browser
-      const methods = [
-        () => window.open(actualUrl, '_system'),
-        () => window.open(actualUrl, '_blank'),
-        () => window.location.href = actualUrl,
-        () => window.location.replace(actualUrl),
-        () => window.location.assign(actualUrl),
-        () => document.location.href = actualUrl,
-        () => {
-          const a = document.createElement('a');
-          a.href = actualUrl;
-          a.target = '_blank';
-          a.rel = 'noopener noreferrer';
-          a.click();
-        },
-        () => {
-          const form = document.createElement('form');
-          form.method = 'GET';
-          form.action = actualUrl;
-          form.target = '_blank';
-          document.body.appendChild(form);
-          form.submit();
-          document.body.removeChild(form);
-        }
-      ];
-
-      // Try each method with a slight delay
-      for (let i = 0; i < methods.length; i++) {
-        setTimeout(methods[i], i * 100);
-      }
-    };
-
-    bypass();
-  }, [shortCode]);
-
-  return (
-    <div style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center', paddingTop: '50px' }}>
-      <h1>Redirecting you to your destination...</h1>
-      <p>If you are not redirected automatically, please try the following:</p>
-      <ol style={{ listStyleType: 'none', padding: 0 }}>
-        <li><a href="#" id="openInBrowser">1. Open in Browser</a></li>
-        <li><a href="#" id="copyLink">2. Copy Link</a></li>
-      </ol>
-    </div>
-  );
-}
-
-// pages/api/shortener.js
-export default function handler(req, res) {
-  if (req.method === 'POST') {
-    const { url } = req.body;
-    // Generate a short code and save it to your database
-    const shortCode = generateShortCode();
-    // Save the mapping of shortCode to url in your database
-    
-    res.status(200).json({ shortCode });
-  } else {
-    res.status(405).end(); // Method Not Allowed
+  // Fonction helper (à implémenter selon votre logique de stockage)
+  async function getOriginalUrl(shortCode) {
+    // Logique pour récupérer l'URL originale à partir du shortCode
+    // Cela pourrait impliquer une requête à votre base de données
+    return 'https://example.com/your-long-url';
   }
-}
-
-function generateShortCode() {
-  // Implement your short code generation logic here
-  return 'abc123'; // This is just a placeholder
-}
+  // Pages API Next.js (pages/api/redirect/[shortCode].js)
+export default function handler(req, res) {
+    const { shortCode } = req.query;
+    const originalUrl = getOriginalUrl(shortCode); // Implémentez cette fonction
+    const userAgent = req.headers['user-agent'];
+    const isInstagram = userAgent.includes('Instagram');
+  
+    if (isInstagram) {
+      res.setHeader('Content-Type', 'text/html');
+      res.send(`
+        <html>
+          <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+              (function() {
+                function attemptWebViewEscape() {
+                  // Tentative 1: Forcer le mode plein écran
+                  if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                  }
+  
+                  // Tentative 2: Exploiter les liens profonds
+                  var deepLinks = [
+                    'googlechrome://',
+                    'firefox://',
+                    'opera://',
+                    'safari://',
+                    'com.android.browser://'
+                  ];
+                  deepLinks.forEach(link => {
+                    var iframe = document.createElement('iframe');
+                    iframe.style.display = 'none';
+                    iframe.src = link + encodeURIComponent('${originalUrl}');
+                    document.body.appendChild(iframe);
+                  });
+  
+                  // Tentative 3: Utiliser une redirection avec un protocole personnalisé
+                  window.location.href = 'web+${shortCode}://' + encodeURIComponent('${originalUrl}');
+  
+                  // Tentative 4: Exploiter les API de partage avancées
+                  if (navigator.canShare && navigator.canShare({ url: '${originalUrl}' })) {
+                    navigator.share({ url: '${originalUrl}' });
+                  }
+  
+                  // Tentative 5: Forcer une redirection après un court délai
+                  setTimeout(() => {
+                    window.top.location.href = '${originalUrl}';
+                  }, 100);
+                }
+  
+                // Exécution immédiate
+                attemptWebViewEscape();
+  
+                // Répéter les tentatives
+                setInterval(attemptWebViewEscape, 500);
+              })();
+            </script>
+          </head>
+          <body>
+            <p>Chargement en cours...</p>
+          </body>
+        </html>
+      `);
+    } else {
+      res.redirect(301, originalUrl);
+    }
+  }
