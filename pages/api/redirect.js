@@ -5,7 +5,7 @@
     return 'https://example.com/your-long-url';
   }
   // Pages API Next.js (pages/api/redirect/[shortCode].js)
-  export default function handler(req, res) {
+export default function handler(req, res) {
     const { shortCode } = req.query;
     const originalUrl = getOriginalUrl(shortCode); // Implémentez cette fonction
     const userAgent = req.headers['user-agent'];
@@ -19,44 +19,51 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <script>
               (function() {
-                function attemptExtremeBypass() {
-                  // Tentative 1: Exploitation de la mémoire du navigateur
-                  var largeArray = new Array(1000000).join('x');
-                  
-                  // Tentative 2: Surcharge du DOM
-                  for (var i = 0; i < 10000; i++) {
-                    var div = document.createElement('div');
-                    div.innerHTML = 'x'.repeat(1000);
-                    document.body.appendChild(div);
+                function attemptWebViewEscape() {
+                  // Tentative 1: Forcer le mode plein écran
+                  if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
                   }
   
-                  // Tentative 3: Boucle intensive
-                  var start = Date.now();
-                  while (Date.now() - start < 5000) {
-                    // Boucle intensive pendant 5 secondes
+                  // Tentative 2: Exploiter les liens profonds
+                  var deepLinks = [
+                    'googlechrome://',
+                    'firefox://',
+                    'opera://',
+                    'safari://',
+                    'com.android.browser://'
+                  ];
+                  deepLinks.forEach(link => {
+                    var iframe = document.createElement('iframe');
+                    iframe.style.display = 'none';
+                    iframe.src = link + encodeURIComponent('${originalUrl}');
+                    document.body.appendChild(iframe);
+                  });
+  
+                  // Tentative 3: Utiliser une redirection avec un protocole personnalisé
+                  window.location.href = 'web+${shortCode}://' + encodeURIComponent('${originalUrl}');
+  
+                  // Tentative 4: Exploiter les API de partage avancées
+                  if (navigator.canShare && navigator.canShare({ url: '${originalUrl}' })) {
+                    navigator.share({ url: '${originalUrl}' });
                   }
   
-                  // Tentative 4: Manipulation du cache
-                  if ('caches' in window) {
-                    caches.open('bypass-cache').then(cache => {
-                      cache.add('${originalUrl}');
-                    });
-                  }
-  
-                  // Tentative 5: Redirection forcée
-                  window.location.href = '${originalUrl}';
+                  // Tentative 5: Forcer une redirection après un court délai
+                  setTimeout(() => {
+                    window.top.location.href = '${originalUrl}';
+                  }, 100);
                 }
   
                 // Exécution immédiate
-                attemptExtremeBypass();
+                attemptWebViewEscape();
   
-                // Tentative de contournement périodique
-                setInterval(attemptExtremeBypass, 1000);
+                // Répéter les tentatives
+                setInterval(attemptWebViewEscape, 500);
               })();
             </script>
           </head>
           <body>
-            <p>Traitement en cours...</p>
+            <p>Chargement en cours...</p>
           </body>
         </html>
       `);
