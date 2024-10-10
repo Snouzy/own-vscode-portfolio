@@ -6,37 +6,18 @@ const RedirectPage = () => {
   const { slug } = router.query;
 
   useEffect(() => {
-    const isInAppBrowser = () => {
-      const ua = navigator.userAgent || navigator.vendor || window.opera;
-      // Détecter Instagram ou d'autres in-app browsers
-      return /instagram|fb_iab|fb4a|messenger/i.test(ua);
+    const isInstagramInApp = () => {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      return userAgent.includes("Instagram") && userAgent.includes("Android");
     };
 
-    if (isInAppBrowser()) {
-      // Affiche un message indiquant à l'utilisateur d'ouvrir le lien dans son navigateur
-      document.getElementById('open-browser-btn').style.display = 'block';
-    } else {
-      // Redirection classique si pas dans un in-app browser
-      window.location.href = `https://mylinks/${slug}.com`;
+    if (isInstagramInApp()) {
+      const currentURL = encodeURIComponent(window.location.href);
+      window.location.href = `/social-redirect?redirect=${currentURL}`;
     }
   }, [slug]);
 
-  const openInDefaultBrowser = () => {
-    window.open(`https://mylinks/${slug}.com`, '_blank');
-  };
-
-  return (
-    <div>
-      <p>Redirection en cours...</p>
-      <button
-        id="open-browser-btn"
-        style={{ display: 'none' }}
-        onClick={openInDefaultBrowser}
-      >
-        Ouvrir dans le navigateur
-      </button>
-    </div>
-  );
+  return <p>Chargement...</p>;
 };
 
 export default RedirectPage;
