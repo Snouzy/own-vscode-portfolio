@@ -13,7 +13,8 @@
         "next-translate": "^2.6.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-github-calendar": "^4.4.1"
+        "react-github-calendar": "^4.4.1",
+        "url": "^0.11.4"
     },
     "devDependencies": {
         "next-translate-plugin": "^2.6.2"
