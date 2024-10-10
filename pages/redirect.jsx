@@ -6,11 +6,6 @@ const RedirectPage = () => {
 
 
 
-  useEffect(() => { 
-    const link = 'https://imgur.com/error/404';
-     const safariLink = `x-web-search://?${link}`; window.location.href = safariLink; },
-    []);
-
   useEffect(() => {
     const isInAppBrowser = () => {
         const ua = navigator.userAgent || navigator.vendor || window.opera;
