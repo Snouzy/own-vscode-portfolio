@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 const RedirectPage = () => {
   const router = useRouter();
-  const { url } = router.query;
+  const { url } = router.query; // Capture the target URL from query parameters
 
   useEffect(() => {
     if (typeof window !== 'undefined' && url) {
@@ -13,23 +13,17 @@ const RedirectPage = () => {
       const isInstagramApp = /Instagram/.test(userAgent);
 
       if (isInstagramApp) {
-        if (/Android/i.test(userAgent)) {
+        if (/iPhone|iPad|iPod/i.test(userAgent)) {
+          // iOS: Use the ftp:// scheme to force open Safari
+          window.location.href = "ftp://yourftpsite.com/redirect.html";
+        } else if (/Android/i.test(userAgent)) {
           // Android: Use intent:// to open the link in the default browser
-          const intentUrl = `intent://redirect-final?scheme=https;end;`;
+          const intentUrl = `intent://yourdomain.com/redirect-final?url=${encodeURIComponent(url)}#Intent;scheme=https;end;`;
           window.location.href = intentUrl;
-        } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
-          // iOS: Try x-web-search:// to open external browser and redirect to intermediate page
-          const searchUrl = `x-web-search://snouzy.com/redirect-final`;
-          window.location.href = searchUrl;
-
-          // Fallback if x-web-search fails
-          setTimeout(() => {
-            window.location.href = `/redirect-final`;
-          }, 300); // Small delay for fallback
         }
       } else {
-        // Non-Instagram users: Redirect to the final page directly
-        window.location.href = `/redirect-final`;
+        // Non-Instagram users: Redirect to the landing page directly
+        window.location.href = `https://${url}`;
       }
     }
   }, [url]);
