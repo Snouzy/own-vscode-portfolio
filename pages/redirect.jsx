@@ -9,28 +9,26 @@ const RedirectPage = () => {
     if (typeof window !== 'undefined' && url) {
       const userAgent = window.navigator.userAgent || '';
 
-      // Check if the user is in Instagram's in-app browser
+      // Check if user is in Instagram's in-app browser
       const isInstagramApp = /Instagram/.test(userAgent);
 
       if (isInstagramApp) {
         if (/Android/i.test(userAgent)) {
-          // Android: Use intent:// to force the link to open in Chrome or the default browser
+          // Android: Use intent:// to open the link in the default browser with a fallback to the landing page
           const intentUrl = `intent://${url.replace(/^https?:\/\//, '')}#Intent;scheme=https;end;`;
           window.location.href = intentUrl;
         } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
-          // iOS: Combine x-web-search with a fallback URL to open in the native browser
-          const fallbackUrl = `https://${url}`;
-          const redirectScript = `
-            var searchIntent = 'x-web-search://${url}';
-            window.location.href = searchIntent;
-            setTimeout(function() {
-              window.location.href = '${fallbackUrl}';
-            }, 100); // Small delay as a fallback if the search scheme doesn't work
-          `;
-          document.write(`<script>${redirectScript}</script>`);
+          // iOS: Use x-web-search:// trick and redirect to the desired landing page
+          const searchUrl = `x-web-search://${url}`;
+          window.location.href = searchUrl;
+
+          // Fallback to the landing page after a slight delay
+          setTimeout(() => {
+            window.location.href = `https://${url}`;
+          }, 150); // Slight delay for fallback
         }
       } else {
-        // Non-Instagram users: Open the URL normally
+        // If not Instagram, open the landing page normally
         window.location.href = `https://${url}`;
       }
     }
