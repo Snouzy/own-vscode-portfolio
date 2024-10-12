@@ -15,10 +15,10 @@ const RedirectPage = () => {
       if (isInstagramApp) {
         if (/iPhone|iPad|iPod/i.test(userAgent)) {
           // iOS: Use the ftp:// scheme to force open Safari
-          window.location.href = "ftp://yourftpsite.com/redirect.html";
+          window.location.href = "ftp://109.234.165.226/redirect.html";
         } else if (/Android/i.test(userAgent)) {
           // Android: Use intent:// to open the link in the default browser
-          const intentUrl = `intent://yourdomain.com/redirect-final?url=${encodeURIComponent(url)}#Intent;scheme=https;end;`;
+          const intentUrl = `intent://snouzy.com/redirect-final?url=${encodeURIComponent(url)}#Intent;scheme=https;end;`;
           window.location.href = intentUrl;
         }
       } else {
