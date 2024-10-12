@@ -15,37 +15,26 @@ const RedirectPage = () => {
       if (isInstagramApp) {
         if (/Android/i.test(userAgent)) {
           // Android: Use intent:// to open the link in the default browser
-          const intentUrl = `intent://${url.replace(/^https?:\/\//, '')}#Intent;scheme=https;end;`;
+          const intentUrl = `intent://redirect-final?scheme=https;end;`;
           window.location.href = intentUrl;
-
-          // Fallback after 300ms to ensure redirection happens
-          setTimeout(() => {
-            window.location.href = `https://${url}`;
-          }, 300);
         } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
-          // iOS: Use x-web-search:// to attempt opening the external browser
-          window.location.href = `x-web-search://${url}`;
+          // iOS: Try x-web-search:// to open external browser and redirect to intermediate page
+          const searchUrl = `x-web-search://snouzy.com/redirect-final`;
+          window.location.href = searchUrl;
 
-          // Fallback to ensure the correct URL is loaded
+          // Fallback if x-web-search fails
           setTimeout(() => {
-            window.location.href = `https://${url}`;
-          }, 300); // Small delay to force redirection
+            window.location.href = `/redirect-final`;
+          }, 300); // Small delay for fallback
         }
       } else {
-        // Non-Instagram users: Open the landing page directly
-        window.location.href = `https://${url}`;
+        // Non-Instagram users: Redirect to the final page directly
+        window.location.href = `/redirect-final`;
       }
     }
   }, [url]);
 
-  return (
-    <div>
-      <p>Redirecting...</p>
-
-      {/* Meta Refresh fallback in case JavaScript fails */}
-      <meta http-equiv="refresh" content="0;url=https://yourlandingpage.com" />
-    </div>
-  );
+  return <p>Exiting Instagram and redirecting...</p>;
 };
 
 export default RedirectPage;
