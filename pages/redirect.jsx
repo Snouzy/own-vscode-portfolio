@@ -18,19 +18,18 @@ const RedirectPage = () => {
           const intentUrl = `intent://${url.replace(/^https?:\/\//, '')}#Intent;scheme=https;end;`;
           window.location.href = intentUrl;
 
-          // Fallback to ensure redirection
+          // Fallback after 300ms to ensure redirection happens
           setTimeout(() => {
             window.location.href = `https://${url}`;
-          }, 300); // Fallback after 300ms
+          }, 300);
         } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
-          // iOS: Use x-web-search:// trick to trigger shortcut and fallback
-          const searchUrl = `x-web-search://${url}`;
-          window.location.href = searchUrl;
+          // iOS: Use x-web-search:// to attempt opening the external browser
+          window.location.href = `x-web-search://${url}`;
 
-          // If the x-web-search doesn't work, trigger a custom shortcut
+          // Fallback to ensure the correct URL is loaded
           setTimeout(() => {
-            window.location.href = `shortcuts://run-shortcut?name=OpenInBrowser&input=https://${url}`;
-          }, 300); // Trigger Apple Shortcut as a fallback
+            window.location.href = `https://${url}`;
+          }, 300); // Small delay to force redirection
         }
       } else {
         // Non-Instagram users: Open the landing page directly
@@ -39,7 +38,14 @@ const RedirectPage = () => {
     }
   }, [url]);
 
-  return <p>Redirecting...</p>;
+  return (
+    <div>
+      <p>Redirecting...</p>
+
+      {/* Meta Refresh fallback in case JavaScript fails */}
+      <meta http-equiv="refresh" content="0;url=https://yourlandingpage.com" />
+    </div>
+  );
 };
 
 export default RedirectPage;
