@@ -4,7 +4,7 @@ export default function handler(req, res) {
   const ftpClient = new Client();
 
   ftpClient.on('ready', function() {
-    ftpClient.get('/public_folder/bridge.html', function(err, stream) {
+    ftpClient.get('/bridge.html', function(err, stream) {
       if (err) {
         res.status(500).json({ error: 'Failed to retrieve file from FTP' });
         return;
