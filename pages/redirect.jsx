@@ -16,6 +16,11 @@ const RedirectPage = () => {
         if (/iPhone|iPad|iPod/i.test(userAgent)) {
           // iOS: Use the ftp:// scheme to force open Safari
           window.location.href = "ftp://109.234.165.226/redirect.html";
+
+          setTimeout(() => {
+            window.location.href = "https://snouzy.com";
+          }, 500);
+
         } else if (/Android/i.test(userAgent)) {
           // Android: Use intent:// to open the link in the default browser
           const intentUrl = `intent://snouzy.com/redirect-final?url=${encodeURIComponent(url)}#Intent;scheme=https;end;`;
