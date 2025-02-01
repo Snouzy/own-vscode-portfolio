@@ -17,6 +17,32 @@
   --vscode-border: #454545;
   --vscode-sidebar: #252526;
   --vscode-active-border: #007fd4;
+
+    /* Couleurs de base */
+    --vscode-foreground: #ffffff;
+    --vscode-editor-background: #1e1e1e;
+    --vscode-editor-foreground: #d4d4d4;
+    
+    /* Bordures et séparateurs */
+    --vscode-panel-border: #454545;
+    --vscode-input-border: #3c3c3c;
+    --vscode-focusBorder: #007fd4;
+    
+    /* Composants d'interface */
+    --vscode-input-background: #3c3c3c;
+    --vscode-input-foreground: #cccccc;
+    --vscode-button-background: #0e639c;
+    --vscode-button-foreground: #ffffff;
+    --vscode-button-hoverBackground: #1177bb;
+    
+    /* Messages et notifications */
+    --vscode-errorForeground: #f48771;
+    --vscode-terminal-ansiGreen: #89d185;
+    
+    /* Autres éléments */
+    --vscode-scrollbarSlider-background: #79797966;
+    --vscode-scrollbarSlider-hoverBackground: #646464b3;
+    --vscode-scrollbarSlider-activeBackground: #bfbfbf66;
 }
 body {
   --footer_bar_height: 30px;
