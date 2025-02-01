@@ -7,7 +7,7 @@ import styles from '../styles/Accordion.module.css';
 
 const LinkComponent = ({ children }) => {
   return (
-    <Link href={children}>
+    <Link href={children} legacyBehavior>
       <a href={children} rel="noopener" target="_blank" className={styles.underline}>
         {children}
       </a>

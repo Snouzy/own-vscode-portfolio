@@ -10,6 +10,10 @@
     "subtitle": "Plateforme SaaS dans l'EdTech (éducation)",
     "description": "Développement de la plateforme de formation \"Andragog\" destinée aux entreprises"
   },
+  "arte": {
+    "subtitle": "Arte Boutique & Educ'ARTE",
+    "description": "Refonte de la boutique en ligne et de la plateforme d'éducation educ'ARTE"
+  },
   "airbus": {
     "subtitle": "Widgets pour l'intranet",
     "description": "Développement de widgets pour l'intranet d'Airbus. <0/>Les widgets sont des applications web qui permettent aux utilisateurs de l'intranet d'Airbus de consulter des informations en temps réel. <0/>Ex: Traffic aérien autour de la base"
@@ -28,7 +32,7 @@
   },
   "fitdistance": {
     "subtitle": "Plateforme SaaS de coaching à distance",
-    "description": "Développement d'une plateforme de coaching à distance dans le domaine du fitness. Le projet a démarrer en 2021 et est toujours en cours au jour d'aujourd'hui"
+    "description": "Développement d'une plateforme de coaching à distance dans le domaine du fitness. Le projet a démarrer en 2021 et est toujours en cours. ✅️ 1400+ coachs ✅️ +4000 users"
   },
   "douane": {
     "subtitle": "Logiciel bureau pour la douane",

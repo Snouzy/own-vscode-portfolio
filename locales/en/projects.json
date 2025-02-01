@@ -10,6 +10,10 @@
     "subtitle": "a SaaS plateform in the fitness industry",
     "description": "Development of a distance coaching platform in the field of fitness. The project started in 2021 and is still in progress today."
   },
+  "arte": {
+    "subtitle": "a SaaS plateform in the education industry",
+    "description": "Development of a training platform in the field of education. The project started in 2021 and is still in progress today."
+  },
   "douane": {
     "subtitle": "Desktop app for Customs",
     "description": "This application allows customs officers to control all the screens distributed over the various brigade doors in order to inform the public more simply and more precisely by centralizing control on a single screen (a dashboard) connected to the various monitors."

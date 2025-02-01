@@ -10,7 +10,7 @@ const AboutLanguages = ({ data }) => {
       <ul style={{ marginLeft: '1rem' }} className={styles.code}>
         {data.links.map((link) => (
           <li key={link.name}>
-            <Link href={link.link || ''}>
+            <Link href={link.link || ''} legacyBehavior>
               <a href={link.link || ''} rel="noopener" target="_blank" className={styles.line}>
                 {link.name}
               </a>

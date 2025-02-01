@@ -8,6 +8,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --vscode-bg: #1e1e1e;
+  --vscode-fg: #d4d4d4;
+  --vscode-accent: #0078d4;
+  --vscode-button-bg: #0078d4;
+  --vscode-button-hover: #2b8dd6;
+  --vscode-border: #454545;
+  --vscode-sidebar: #252526;
+  --vscode-active-border: #007fd4;
+}
 body {
   --footer_bar_height: 30px;
   --header_bar_height: 30px;

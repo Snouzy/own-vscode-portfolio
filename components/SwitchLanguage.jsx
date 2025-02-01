@@ -13,7 +13,7 @@ export default function ChangeLanguage() {
     <div className={styles.container}>
       {locales.map((lng) => {
         return (
-          <Link href="/" locale={lng} key={lng}>
+          <Link href="/" locale={lng} key={lng} legacyBehavior>
             <a href="/" rel="noopener" className={styles.underline}>
               {t(`common:language-name-${lng}`)}
             </a>

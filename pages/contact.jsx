@@ -12,6 +12,7 @@ const ContactPage = () => {
   const [message, setMessage] = useState('');
 
   const submitForm = async (e) => {
+    alert("ça marche plus et j'ai pas eu le temps de fix loool. Contacte moi sur Linkedin ;)")
     e.preventDefault();
 
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`, {

@@ -19,6 +19,12 @@
 
   color: var(--text-color);
   font-family: 'JetBrains Mono', monospace;
+
+
+  @media (max-width: 768px) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 
 .content {

@@ -1,5 +1,21 @@
 [
   {
+    "id": 1221,
+    "title": "Fit'Distance",
+    "name": "fitdistance",
+    "image": "/fitdistance.png",
+    "tags": ["reactjs", "node", "express", "typescript", "rtk", "material-ui"],
+    "demo": "https://fitdistance.io/"
+  },
+  {
+    "id": 1222,
+    "title": "ARTE",
+    "name": "arte",
+    "image": "/arte.jpg",
+    "tags": ["reactjs", "nextjs", "typescript", "tailwindcss", "material-ui", "refine"],
+    "demo": "https://arte.io/"
+  },
+  {
     "id": 1,
     "title": "Santeol x SESAM-Vitale",
     "name": "santeol",
@@ -48,13 +64,6 @@
     "image": "/trendex.png",
     "tags": ["reactjs", "node", "mongodb", "mui", "react-query", "redux", "typescript"],
     "demo": "https://app.trendex.vip/top-50"
-  },
-  {
-    "id": 2,
-    "title": "Fit'Distance",
-    "name": "fitdistance",
-    "image": "/fitdistance.png",
-    "tags": ["reactjs", "node", "express", "typescript", "rtk", "material-ui"]
   },
   {
     "id": 3,

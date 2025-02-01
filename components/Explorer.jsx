@@ -17,28 +17,28 @@ const Explorer = () => {
           Portfolio
         </label>
         <div className={styles.files} style={portfolioOpen ? { display: 'block' } : { display: 'none' }}>
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <div className={styles.file}>
               <Image src="/react_icon.svg" alt="React Icon" height={18} width={18} /> <p>home.tsx</p>
             </div>
           </Link>
-          <Link href="/about">
+          <Link href="/about" legacyBehavior>
             <div className={styles.file}>
               <Image src="/html_icon.svg" alt="HTML Icon" height={18} width={18} /> <p>about.html</p>
             </div>
           </Link>
-          <Link href="/contact">
+          <Link href="/contact" legacyBehavior>
             <div className={styles.file}>
               <Image src="/css_icon.svg" alt="CSS Icon" height={18} width={18} /> <p>contact.css</p>
             </div>
           </Link>
-          <Link href="/projects">
+          <Link href="/projects" legacyBehavior>
             <div className={styles.file}>
               <Image src="/js_icon.svg" alt="JavaScript Icon" height={18} width={18} /> <p>projects.js</p>
             </div>
           </Link>
 
-          <Link href="/github">
+          <Link href="/github" legacyBehavior>
             <div className={styles.file}>
               <Image src="/markdown_icon.svg" alt="Markdown Icon" height={18} width={18} /> <p>github.md</p>
             </div>

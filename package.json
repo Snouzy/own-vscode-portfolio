@@ -10,12 +10,14 @@
     "dependencies": {
         "@notionhq/client": "^2.2.15",
         "basic-ftp": "^5.0.5",
+        "framer-motion": "^12.0.6",
         "ftp": "^0.3.10",
         "next": "13.4.3",
         "next-translate": "^2.6.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-github-calendar": "^4.4.1",
+        "react-icons": "^5.4.0",
         "url": "^0.11.4"
     },
     "devDependencies": {
