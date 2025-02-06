@@ -13,7 +13,7 @@
     "name": "arte",
     "image": "/arte.jpg",
     "tags": ["reactjs", "nextjs", "typescript", "tailwindcss", "material-ui", "refine"],
-    "demo": "https://arte.io/"
+    "demo": "https://educ.arte.tv/"
   },
   {
     "id": 1,
