@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useMutation } from '@tanstack/react-query';
 import styles from '../styles/SolopreneurRessourcesPage.module.css';
 
-const EpitechPage = () => {
+const PromptsPage = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   
   const mutation = useMutation({
@@ -34,9 +34,9 @@ const EpitechPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Ressources pour solopreneurs</h1>
+        <h1 className={styles.title}>Récupère tes prompts gratuits</h1>
         <p className={styles.description}>
-          Reçois gratuitement ma sélection d'outils et de ressources pour lancer et développer ton business en solo.
+          Tu as écrit "prompt" en commentaire ? Parfait ! Saisis ton email ci-dessous pour recevoir ma liste de prompts ChatGPT/Claude gratuite.
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -80,7 +80,7 @@ const EpitechPage = () => {
                 <svg className={styles.icon} width="16" height="16" viewBox="0 0 16 16">
                   <path fill="currentColor" d="M8 2L2 5v6l6 3 6-3V5L8 2zm0 11.5L3 10.7V5.8l5 2.5v5.2zm1-6.9L4 4.3l4-2 4 2-5 2.3zm4 3.4L9 8.7v5.2l4-1.8V6.8z"/>
                 </svg>
-                Reçois tes ressources
+                Récupère tes prompts
               </>
             )}
           </button>
@@ -113,4 +113,4 @@ const EpitechPage = () => {
   );
 };
 
-export default EpitechPage;
+export default PromptsPage;
