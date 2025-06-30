@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   // exclude pages from layout
-  const pagesWithoutLayout = ['/prompts'];
+  const pagesWithoutLayout = ['/prompts', '/pense-bete-sg'];
   const shouldShowLayout = !pagesWithoutLayout.includes(router.pathname);
 
   const content = (
